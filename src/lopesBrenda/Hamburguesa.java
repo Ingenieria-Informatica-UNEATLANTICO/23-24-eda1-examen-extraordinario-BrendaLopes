@@ -18,6 +18,15 @@ class Hamburguesa {
         extras.add(extra);
     }
 
+    public int encontrarExtraPorNombre(String nombre) {
+        for (int i = 0; i < extras.size(); i++) {
+            if (extras.get(i).describir().contains(nombre)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public void mostrar() {
         panes[0].mostrar();
         carne.mostrar();
