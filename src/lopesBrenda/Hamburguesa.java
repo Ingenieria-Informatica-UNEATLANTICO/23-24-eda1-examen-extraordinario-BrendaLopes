@@ -18,7 +18,23 @@ class Hamburguesa {
         extras.add(extra);
     }
 
-    public int encontrarExtraPorNombre(String nombre) {
+    public void actualizarExtra(int index, Extra nuevoExtra) {
+        if (index >= 0 && index < extras.size()) {
+            extras.set(index, nuevoExtra);
+        }
+    }
+
+    public void eliminarExtra(int index) {
+        if (index >= 0 && index < extras.size()) {
+            extras.remove(index);
+        }
+    }
+
+    public void agregarExtraIntermedio(int index, Extra extra) {
+        extras.add(index, extra);
+    }
+
+    public int encontrarExtraNombre(String nombre) {
         for (int i = 0; i < extras.size(); i++) {
             if (extras.get(i).describir().contains(nombre)) {
                 return i;
