@@ -1,0 +1,17 @@
+@startuml
+
+class Hamburguesa {
+    -Pan[] panes
+    -Carne carne
+    -Extra[] extras
+    +Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne, int numeroExtras)
+    +void agregarExtra(Extra extra)
+    + actualizarExtra(index: int, nuevoExtra: Extra): void 
+    + eliminarExtra(index: int): void     
+    + agregarExtraNombre(index: int, extra: Extra): void 
+    + encontrarExtraNombre(nombre: String): int 
+    +void mostrar()
+    +void describir()
+}
+
+@enduml
