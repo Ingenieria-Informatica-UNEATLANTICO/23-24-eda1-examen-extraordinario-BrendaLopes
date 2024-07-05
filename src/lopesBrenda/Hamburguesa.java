@@ -1,16 +1,17 @@
 package lopesBrenda;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Hamburguesa {
     private Pan[] panes;
     private Carne carne;
-    private Extra[] extras;
-    private int extrasAgregados;
+    private List<Extra> extras;
 
-    public Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne, int numeroExtras) {
+    public Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne) {
         this.panes = new Pan[]{panSuperior, panInferior};
         this.carne = carne;
-        this.extras = new Extra[numeroExtras];
-        this.extrasAgregados = 0;
+        this.extras = new ArrayList<>();
     }
 
     public void agregarExtra(Extra extra) {
