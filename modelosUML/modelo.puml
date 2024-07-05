@@ -3,8 +3,8 @@
 class Hamburguesa {
     -Pan[] panes
     -Carne carne
-    -Extra[] extras
-    +Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne, int numeroExtras)
+    -NodoExtra primerExtra
+    +Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne)
     +void agregarExtra(Extra extra)
     + actualizarExtra(index: int, nuevoExtra: Extra): void 
     + eliminarExtra(index: int): void     
@@ -12,6 +12,7 @@ class Hamburguesa {
     + encontrarExtraNombre(nombre: String): int 
     +void mostrar()
     +void describir()
+    -NodoExtra obtenerNodoEnIndice(index: int)
 }
 
 @enduml
