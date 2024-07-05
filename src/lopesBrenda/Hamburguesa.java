@@ -30,7 +30,7 @@ class Hamburguesa {
         }
     }
 
-    public void agregarExtraIntermedio(int index, Extra extra) {
+    public void agregarExtra(int index, Extra extra) {
         extras.add(index, extra);
     }
 
