@@ -1,18 +1,31 @@
 @startuml
-
 class Hamburguesa {
-    -Pan[] panes
-    -Carne carne
-    -NodoExtra primerExtra
-    +Hamburguesa(Pan panSuperior, Pan panInferior, Carne carne)
-    +void agregarExtra(Extra extra)
-    + actualizarExtra(index: int, nuevoExtra: Extra): void 
-    + eliminarExtra(index: int): void     
-    + agregarExtraNombre(index: int, extra: Extra): void 
-    + encontrarExtraNombre(nombre: String): int 
-    +void mostrar()
-    +void describir()
-    -NodoExtra obtenerNodoEnIndice(index: int)
+    - panes: Pan[]
+    - carne: Carne
+    - primerExtra: NodoExtra
+    - tamañoExtras: int
+
+    + Hamburguesa(panSuperior: Pan, panInferior: Pan, carne: Carne)
+    + agregarExtra(extra: Extra): void
+    + agregarExtra(index: int, extra: Extra): void
+    + eliminarExtra(index: int): void
+    + actualizarExtra(index: int, nuevoExtra: Extra): void
+    + encontrarExtraNombre(nombre: String): int
+    + mostrar(): void
+    + describir(): String
 }
+
+class NodoExtra {
+    - extra: Extra
+    - siguiente: NodoExtra
+
+    + NodoExtra(extra: Extra)
+    + getExtra(): Extra
+    + setExtra(extra: Extra): void
+    + getSiguiente(): NodoExtra
+    + setSiguiente(siguiente: NodoExtra): void
+}
+
+Hamburguesa "1" -- "0..*" NodoExtra
 
 @enduml
