@@ -2,17 +2,18 @@ Plan de codigo:
 
 Para poder reorganizar, quitar y agregrar elementos en el codigo planteado en programación 2:
 
-Cambiar la clase Hamburguesa para que los extras no sean un Array (fijo) si no que un ArrayList<> de extras para que asi exista una gestión mas dinamica y sea posible modificarlos de acuerdo con lo que se necesita. 
+Cambiar el atributo extras de tipo Array a utilizar nodos enlazados (NodoExtra).
+Eliminar el parámetro numeroExtras del constructor de Hamburguesa.
 
-Quitar el parametro numeroExtras en el constructor de hamburguesa ya que no es necesario. 
 
-Implementar los métodos CRUD: 
-3 métodos que permitirían, reorganizar, quitar y agregar extras de una posición específica de la lista (especificado con su index).
+Definir una clase NodoExtra que contenga un objeto y una referencia al siguiente nodo.
 
-reorganizarExtra() 
-eliminarExtra() /
-agregarExtraIntermedio()
+Metodos CRUD:
 
-encontrarExtraNombre()-> Metodo que permitiría encontrar el index del extra en la lista basado en su nombre
+Implementar agregarExtraIntermedio() para poner un nuevo nodo en una posición específica.
+Implementar eliminarExtra() para remover un nodo en una posición específica de la lista.
+Implementar reorganizarExtra() para mover un extra de una posición a otra en la lista.
+Implementar encontrarExtraPorNombre(String nombre) para buscar y devolver el índice del extra basado en el nombre.
 
-Los metodos mostrar y describir también serían modificados, ya que antes hacian un recorrido de extras en el for utilizando un contador "extrasAgregados". Ahora con el arraylist de extras no hace falta un contador para leer la lista.
+Tambien tendria que actualizar Métodos mostrar y describir:
+
