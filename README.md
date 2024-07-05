@@ -13,6 +13,6 @@ reorganizarExtra()
 eliminarExtra() /
 agregarExtraIntermedio()
 
-encontrarExtra()-> Metodo que permitiría encontrar el index del extra en la lista basado en su nombre
+encontrarExtraNombre()-> Metodo que permitiría encontrar el index del extra en la lista basado en su nombre
 
 Los metodos mostrar y describir también serían modificados, ya que antes hacian un recorrido de extras en el for utilizando un contador "extrasAgregados". Ahora con el arraylist de extras no hace falta un contador para leer la lista.

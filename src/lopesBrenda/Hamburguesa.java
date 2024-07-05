@@ -116,4 +116,40 @@ class Hamburguesa {
         }
         return actual;
     }
+
+    public static void main(String[] args) {
+        Pan panSuperior = new Brioche();
+        Pan panInferior = new Brioche();
+        Carne carne = new Res("poco hecha");
+
+        Hamburguesa hamburguesa = new Hamburguesa(panSuperior, panInferior, carne);
+
+        hamburguesa.agregarExtra(new Cheddar());
+        hamburguesa.agregarExtra(new Ketchup("poco"));
+        hamburguesa.agregarExtra(new Mayonesa("mucho"));
+
+        System.out.println("Hamburguesa inicial:");
+        hamburguesa.mostrar();
+        System.out.println();
+
+        int indexCheddar = hamburguesa.encontrarExtraNombre("Cheddar");
+        if (indexCheddar != -1) {
+            hamburguesa.actualizarExtra(indexCheddar, new Azul());
+            System.out.println("Hamburguesa después de actualizar 'Cheddar' a 'Queso Azul':");
+            hamburguesa.mostrar();
+            System.out.println();
+        } else {
+            System.out.println("No se encontró el extra 'Cheddar' en la hamburguesa.");
+        }
+
+        int indexMayonesa = hamburguesa.encontrarExtraNombre("Mayonesa");
+        if (indexMayonesa != -1) {
+            hamburguesa.eliminarExtra(indexMayonesa);
+            System.out.println("Hamburguesa después de eliminar 'Mayonesa':");
+            hamburguesa.mostrar();
+        } else {
+            System.out.println("No se encontró el extra 'Mayonesa' en la hamburguesa.");
+        }
+    }
+
 }

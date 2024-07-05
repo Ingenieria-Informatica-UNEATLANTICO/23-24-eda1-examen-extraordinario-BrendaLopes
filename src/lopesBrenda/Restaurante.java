@@ -15,5 +15,6 @@ class Restaurante {
     public static void main(String[] args) {
         Restaurante crustaceoCrujiente = new Restaurante();
         crustaceoCrujiente.atender();
+
     }
 }
